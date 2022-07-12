@@ -1,3 +1,5 @@
+#Script to check for unused/unmanaged resources for cost savings
+
 
 $unattachedDisks = Get-AzDisk | where-object DiskState -eq 'unattached' | select-object Resourcegroupname,name,DiskSizeGB,Tier,Location
 
